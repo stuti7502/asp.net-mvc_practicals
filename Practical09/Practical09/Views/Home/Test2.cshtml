@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Test 2";
+}
+
+<div id="hello" class="jumbotron text-center" style="display:none;">
+    HELLO WORLD
+</div>
+<br />
+<br />
+<button class="btn btn-outline-dark" onclick="print()">Print Text</button>
+<button class="btn btn-outline-dark" onclick="bold()">Bold</button>
+<button class="btn btn-outline-dark" onclick="italic()">Italic</button>
+<button class="btn btn-outline-dark" onclick="underline()">Underline</button>
+<button class="btn btn-outline-dark" onclick="resetstyle()">Reset</button>
+
+<script>
+    function print() {
+        document.getElementById("hello").style.display = "block";
+    }
+    function bold() {
+        document.getElementById("hello").style.fontWeight = "bold";
+    }
+    function italic() {
+        document.getElementById("hello").style.fontStyle = "italic";
+    }
+    function underline() {
+        document.getElementById("hello").style.textDecoration = "underline";
+    }
+    function resetstyle() {
+        document.getElementById("hello").removeAttribute("style");
+    }
+</script>
