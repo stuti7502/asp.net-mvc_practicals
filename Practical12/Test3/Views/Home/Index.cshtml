@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*@{
+        Html.RenderPartial("Index1");
+        Html.RenderPartial("Index2");
+    }*@
+<table class="table">
+    <tr>
+        <th>
+            Queries
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    <tr>
+        <td>
+            Employee Table
+        </td>
+        <td>
+            @Html.ActionLink("Click", "Index1", null, new { @class = "btn btn-info" })
+        </td>
+    <tr>
+        <td>
+            Designation Table
+        </td>
+        <td>
+            @Html.ActionLink("Click", "Index2", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>
+            Write a query to count the number of records by designation name
+        </td>
+        <td>
+            @Html.ActionLink("Click", "CountDesignation", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Write a query to display First Name, Middle Name, Last Name & Designation name
+        </td>
+        <td>
+            @Html.ActionLink("Click", "Joins", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Create a database view that outputs Employee Id, First Name, Middle Name, Last Name, Designation, DOB, Mobile Number, Address & Salary
+        </td>
+        <td>
+            @Html.ActionLink("Click", "databaseView", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Create a stored procedure to insert data into the Designation table with required parameters
+        </td>
+        <td>
+            @Html.ActionLink("Click", "CreateDesignation", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Create a stored procedure to insert data into the Employee table with required parameters
+        </td>
+        <td>
+            @Html.ActionLink("Click", "CreateEmployee", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Write a query that displays only those designation names that have more than 1 employee
+        </td>
+        <td>
+            @Html.ActionLink("Click", "EmployeeCount", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Create a stored procedure that returns a list of employees with columns Employee Id, First Name, Middle Name, Last Name, Designation, DOB, Mobile Number, Address & Salary (records should be ordered by DOB)
+        </td>
+        <td>
+            @Html.ActionLink("Click", "OrderByDob", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Create a stored procedure that return a list of employees by designation id (Input) with columns Employee Id, First Name, Middle Name, Last Name, DOB, Mobile Number, Address & Salary (records should be ordered by First Name)
+        </td>
+        <td>
+            @Html.ActionLink("Click", "OrderByFname", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Create Non-Clustered index on the DesignationId column of the Employee table
+        </td>
+        <td>
+            @Html.ActionLink("Click", "nonClusteredIndex", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Write a query to find the employee having maximum salary
+        </td>
+        <td>
+            @Html.ActionLink("Click", "maxSalary", null, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+</table>

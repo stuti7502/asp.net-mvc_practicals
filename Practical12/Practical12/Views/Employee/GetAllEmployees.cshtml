@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Practical12.Models.Employee>
+
+@{
+    ViewBag.Title = "GetAllEmployees";
+}
+
+<h2>GetAllEmployees</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobileNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.address)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.address)
+            </td>
+        </tr>
+    }
+
+
+</table>
+@Html.ActionLink("Insert Test Record", "TestRecords", null, new { @class = "btn btn-info" })
+<br /><br />
+@Html.ActionLink("Update query to change the First Name to “SQLPerson” for the first record", "firstPersonUpdate", null, new { @class = "btn btn-info" })
+<br /><br />
+@Html.ActionLink("change the Middle Name to “I” for all records", "MiddleNameUpdate", null, new { @class = "btn btn-info" })
+<br /><br />
+@Html.ActionLink("delete record having Id column value less than 2e", "DeleteRecord", null, new { @class = "btn btn-info" })
+<br /><br />
+@Html.ActionLink("delete", "DeleteRecord", null, new { @class = "btn btn-info" })
+<br />

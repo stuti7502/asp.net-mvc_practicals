@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Test3.Models.DesignationCount>
+
+@{
+    ViewBag.Title = "EmployeeCount";
+}
+
+<h2>EmployeeCount</h2>
+
+<p>
+    @Html.ActionLink("Back To Index", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DesignationNames)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.count)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesignationNames)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.count)
+        </td>
+    </tr>
+}
+
+</table>
