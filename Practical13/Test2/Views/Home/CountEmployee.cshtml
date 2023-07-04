@@ -1,0 +1,33 @@
+﻿@model List<Test2.Models.ViewModel>
+
+@{
+    ViewBag.Title = "CountEmployee";
+}
+
+<h2>CountEmployee</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model[0].desg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].count)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.desg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.count)
+        </td>
+    </tr>
+}
+
+</table>

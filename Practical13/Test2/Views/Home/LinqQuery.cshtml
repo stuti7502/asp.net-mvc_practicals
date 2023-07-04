@@ -1,0 +1,70 @@
+﻿@model List<Test2.Models.ViewModel>
+
+@{
+    ViewBag.Title = "LinqQuery";
+}
+
+<h2>LinqQuery</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model[0].designation.DesignationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].employee2.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].employee2.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].employee2.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].employee2.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].employee2.Mobile_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].employee2.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model[0].employee2.Salary)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.designation.DesignationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee2.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee2.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee2.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee2.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee2.Mobile_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee2.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.employee2.Salary)
+        </td>
+    </tr>
+}
+
+</table>

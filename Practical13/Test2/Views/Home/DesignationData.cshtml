@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Test2.Models.Designation>
+
+@{
+    ViewBag.Title = "DesignationData";
+}
+
+<h2>DesignationData</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Designation")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DesignationName)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DesignationName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "Designation", new { id=item.Id }, null) |
+            @Html.ActionLink("Details", "Details", "Designation", new { id=item.Id }, null) |
+            @Html.ActionLink("Delete", "Delete", "Designation", new { id=item.Id }, null)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Query
+        </th>
+        <th></th>
+    </tr>
+    <tr>
+        <td>
+            Add a button to the page and on click of that button, Columns should be displayed with the help of LINQ query. Columns are Employee Id, First Name, Middle Name, Last Name, Designation Name, DOB, Mobile Number, Address & Salary
+        </td>
+        <td>
+            @Html.ActionLink("Click", "LinqQuery")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Add a button to the page and on click of that button, display the count number of records of the employee by designation name using LINQ query.
+        </td>
+        <td>
+            @Html.ActionLink("Click", "CountEmployee")
+        </td>
+    </tr>
+</table>
