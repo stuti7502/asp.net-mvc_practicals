@@ -1,0 +1,94 @@
+﻿@model IPagedList<Practical_14.Models.Employee>
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+Employee Name:
+<input id="txtEmployeeName" type="text" />
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().DOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody id="tbl">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DOB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", "Employees", new { page }))
+@section scripts{
+    <script type="text/javascript">
+   $(document).ready(function () {
+       $("#txtEmployeeName").keyup(function (e) {
+            var url = "@Url.Content("~/Employees/SearchEmployee")";
+            $.ajax({
+                url,
+                method: "POST",
+                data: { search: e.target.value },
+                success: (data) => {
+                    $("#tbl").empty();
+                    $.each(data, (index, d) => {
+                        $("#tbl").append(`<tr>
+                                    <td>${d.Id}</td>
+                                    <td>${d.Name}</td>
+                                    <td>${new Date(parseInt(d.DOB.replace('/Date(', ''))).toLocaleDateString()}</td>
+                                    <td>${d.Age}</td>
+                                    <td> <a class="" href="Edit/${d.Id}">Edit</a> |
+                                         <a class="" href="Details/${d.Id}">Details</a> |
+                                         <a class="" href="Delete/${d.Id}">Delete</a>
+                        </td></tr>`)
+                    })
+                },
+                error: (err) => {
+                    console.log(err);
+                }
+            });
+        });
+    });
+    </script>
+}
+
