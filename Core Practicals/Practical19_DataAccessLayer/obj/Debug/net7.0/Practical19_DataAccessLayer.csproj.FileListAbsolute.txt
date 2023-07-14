@@ -1,0 +1,14 @@
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\bin\Debug\net7.0\Practical19_DataAccessLayer.deps.json
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\bin\Debug\net7.0\Practical19_DataAccessLayer.dll
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\bin\Debug\net7.0\Practical19_DataAccessLayer.pdb
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\Practical19_DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\Practical19_DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\Practical19_DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\Practical19_DataAccessLayer.AssemblyInfo.cs
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\Practical19_DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\Practical19_DataAccessLayer.dll
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\refint\Practical19_DataAccessLayer.dll
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\Practical19_DataAccessLayer.pdb
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\ref\Practical19_DataAccessLayer.dll
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\bin\Debug\net7.0\Practical19_DataAccessLayer.runtimeconfig.json
+C:\Users\stuti\source\repos\Practical16\Practical19_DataAccessLayer\obj\Debug\net7.0\Practical19_DataAccessLayer.genruntimeconfig.cache
