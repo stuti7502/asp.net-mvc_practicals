@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Practical17.Models.LoginModel
+<form asp-action="Login">
+    @Html.HiddenFor(x=>x.ReturnUrl)
+    <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">UserName</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="UserName" name="username">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4" name="Password" placeholder="Password">
+  </div>
+    
+  <br />
+    <button class="btn btn-primary">Sign In</button>
+</form> 
+<label class="text-danger">@ViewBag.Message</label>

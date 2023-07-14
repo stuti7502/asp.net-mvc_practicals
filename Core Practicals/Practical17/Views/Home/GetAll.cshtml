@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Practical17.Models.Student>
+
+@{
+    ViewData["Title"] = "GetAll";
+}
+
+<h1>HomeController</h1>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="AddStudent">Create New</a>
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                    <a asp-action="GetStudentDetails" asp-route-id="@item.StudentId">Details</a> |
+                    @if (User.IsInRole("Admin")) {
+                        <a asp-action="EditStudent" asp-route-id="@item.StudentId">Edit</a>
+                         <a asp-action = "DeleteStudent" asp-route-id = "@item.StudentId" > Delete </a>
+                        }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

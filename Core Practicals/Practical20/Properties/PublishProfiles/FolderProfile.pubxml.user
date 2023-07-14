@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\stuti\Documents\Publish</_PublishTargetUrl>
+    <History>True|2023-07-13T10:52:35.1056190Z;</History>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ConnStrings">
+      <Value>server =.%3b database=Practical20%3b user ID =sa%3b Password=Stuti%40752002%3b encrypt =false</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Practical20.context.DbContextClass">
+      <Value>server =.%3b database=Practical20%3b user ID =sa%3b Password=Stuti%40752002%3b encrypt =false</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
